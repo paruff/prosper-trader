@@ -9,10 +9,10 @@
 	<h1>Result</h1>
     <p th:text="'id: ' + ${watch.watchId}" />
     <p th:text="'symbol: ' + ${watch.symbol}" />
-    <p th:text="'quote: ' + ${watch.quote}" />
-    <p th:text="'entry: ' + ${watch.entry}" />
-    <p th:text="'exit: ' + ${watch.exit}" />
-    <p th:text="'size: ' + ${watch.size}" />
+    <p th:text="'quote: ' + ${watch.getQuote()}" />
+    <p th:text="'entry: ' + ${watch.getEntry()}" />
+    <p th:text="'exit: ' + ${watch.getExit()}" />
+    <p th:text="'size: ' + ${watch.getSize()}" />
     <a href="/watch">Submit another message</a>
 </body>
 </html>

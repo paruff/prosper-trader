@@ -5,20 +5,25 @@ import java.math.BigDecimal;
 import java.util.Calendar;
 import java.util.List;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import yahoofinance.Stock;
 import yahoofinance.YahooFinance;
 import yahoofinance.histquotes.HistoricalQuote;
 import yahoofinance.histquotes.Interval;
 
+//@Entity
 public class Watch {
-//	Watch(String symbol) throws IOException {
-//		Calendar from = Calendar.getInstance();
-//		Calendar to = Calendar.getInstance();
-//		from.add(Calendar.YEAR, -1); // from 1 year ago
-//
-//		Stock stock = YahooFinance.get(symbol);
-//	    stockHistQuotes = stock.getHistory(from, to, Interval.DAILY);
-//	}
+
+// @Id
+// @GeneratedValue
+private int watchId;
+
+private String symbol;
 
 	public int getWatchId() {
 		return watchId;
@@ -97,10 +102,10 @@ public class Watch {
 		
 	}
 	
-	private int watchId;
-	private String symbol;
-	private double quote;
-	private BigDecimal entry;
+//	private int watchId;
+//	private String symbol;
+//	private double quote;
+//	private BigDecimal entry;
 	private int size;
 	List<HistoricalQuote> stockHistQuotes;
 	
