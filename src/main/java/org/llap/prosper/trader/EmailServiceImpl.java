@@ -6,12 +6,12 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Component;
 
 @Component
-public class EmailServiceImpl implements EmailService {
+public class EmailServiceImpl {
   
     @Autowired
-    public JavaMailSender emailSender;
+    public static JavaMailSender emailSender;
  
-    public void sendSimpleMessage(
+    public static void sendSimpleMessage(
       String to, String subject, String text) {
         
         SimpleMailMessage message = new SimpleMailMessage(); 
@@ -22,3 +22,4 @@ public class EmailServiceImpl implements EmailService {
         
     }
 }
+
