@@ -28,7 +28,7 @@ public class WatchServiceJpaImpl implements WatchService {
     }
     
 	@Override
-	public Watch findById(Long id) {
+	public Watch findById(int id) {
 		return this.watchRepo.findOne(id);
 	}
 
@@ -50,7 +50,7 @@ public class WatchServiceJpaImpl implements WatchService {
 	}
 
 	@Override
-	public void deleteById(Long id) {
+	public void deleteById(int id) {
 		// TODO Auto-generated method stub
 
 	}

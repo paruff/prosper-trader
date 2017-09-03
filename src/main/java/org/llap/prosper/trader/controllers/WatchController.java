@@ -53,6 +53,12 @@ public class WatchController {
         return "watches";
     }
     
+    
+    @RequestMapping("watch/{id}")
+    public String showProduct(@PathVariable int id, Model model){
+        model.addAttribute("watch", watchService.findById(id));
+        return "watchshow";
+    }
     @PostMapping("/watch")
     public String watchSubmit(@ModelAttribute Watch watch) {
         return "result";

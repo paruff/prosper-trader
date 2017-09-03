@@ -7,13 +7,13 @@ import org.llap.prosper.trader.models.Watch;
 public interface WatchService {
 	List<Watch> findAll();
 
-	Watch findById(Long id);
+	Watch findById(int id);
 
 	Watch create(Watch watch);
 
 	Watch edit(Watch watch);
 
-	void deleteById(Long id);
+	void deleteById(int id);
 
 	Iterable<Watch> listAllWatches();
 }

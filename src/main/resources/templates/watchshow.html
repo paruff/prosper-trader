@@ -1,0 +1,48 @@
+
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+
+    <h2>Watch Details</h2>
+        <div>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">watch Id:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${watch.watchId}">watch Id</p></div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Symbol:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${watch.symbol}">Symbol</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Price:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${watch.getQuote()}">Priceaddd</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Entry:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${watch.getEntry()}">entry</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Entry:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${watch.getExit()}">entry</p>
+                    </div>
+                </div>
+            </form>
+    </div>
+</div>
+</body>
+</html>

@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface WatchRepository extends JpaRepository<Watch, Long> {
+public interface WatchRepository extends JpaRepository<Watch, Integer> {
 	@Query("SELECT w FROM Watch w ")
 	List<Watch> findAll();
 	

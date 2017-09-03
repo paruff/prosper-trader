@@ -17,6 +17,8 @@
 
 					<th>Symbol</th>
 					<th>Price</th>
+					<th>Entry</th>
+					<th>Exit</th>
 					<th>View</th>
 					<th>Edit</th>
 				</tr>
@@ -25,6 +27,8 @@
 						href="/watch/${watch.watchId}">Id</a></td>
 					<td th:text="${watch.symbol}">symbol</td>
 					<td th:text="${watch.getQuote()}">price</td>
+					<td th:text="${watch.getEntry()}">Entry</td>
+					<td th:text="${watch.getExit()}">Exit</td>
 					<td><a th:href="${ '/watch/' + watch.watchId}">View</a></td>
 					<td><a th:href="${'/watch/edit/' + watch.watchId}">Edit</a></td>
 				</tr>
