@@ -38,7 +38,7 @@ public class WatchController {
 
     @RequestMapping("watch/new")
     public String newWatch(Model model){
-        model.addAttribute("product", new Watch());
+        model.addAttribute("watch", new Watch());
         return "watchform";
     }
 

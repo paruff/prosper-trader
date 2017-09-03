@@ -37,7 +37,7 @@ public class PositionController {
 
     @RequestMapping("position/new")
     public String newProduct(Model model){
-        model.addAttribute("product", new Position());
+        model.addAttribute("position", new Position());
         return "positionform";
     }
 

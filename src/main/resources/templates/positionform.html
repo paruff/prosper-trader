@@ -10,15 +10,15 @@
 <div class="container">
     <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
 
-    <h2>Watch Details</h2>
+    <h2>Position Details</h2>
     <div>
-        <form class="form-horizontal" th:object="${watch}" th:action="@{/watch}" method="post">
-            <input type="hidden" th:field="*{watchId}"/>
+        <form class="form-horizontal" th:object="${position}" th:action="@{/position}" method="post">
+            <input type="hidden" th:field="*{id}"/>
 <!--             <input type="hidden" th:field="*{version}"/> -->
             <div class="form-group">
-                <label class="col-sm-2 control-label">watch Id:</label>
+                <label class="col-sm-2 control-label">position Id:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" th:field="*{watchId}"/>
+                    <input type="text" class="form-control" th:field="*{id}"/>
                 </div>
             </div>
             <div class="form-group">
@@ -27,6 +27,28 @@
                     <input type="text" class="form-control" th:field="*{symbol}"/>
                 </div>
             </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Purchase Price:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{purchasePrice}"/>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Purchase Shares:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{purchaseShares}"/>
+                </div>
+            </div>
+   <!-- 
+             <div class="form-group">
+                <label class="col-sm-2 control-label">Purchase Date:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{purchaseDate}"/>
+                </div>
+            </div>
+     -->  
 
             <div class="row">
                 <button type="submit" class="btn btn-default">Submit</button>
