@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 
 	@Repository
 	public interface PositionRepository extends
-	        JpaRepository<Position, Long> {
+	        JpaRepository<Position, Integer> {
 	    @Query("SELECT p FROM Position p ")
 	    List<Position> findAll();
 	}

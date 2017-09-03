@@ -6,8 +6,10 @@ import org.llap.prosper.trader.models.Position;
 
 public interface PositionService {
     List<Position> findAll();
-    Position findById(Long id);
+    Position findById(int id);
     Position create(Position position);
     Position edit(Position position);
-    void deleteById(Long id);
+    void deleteById(int id);
+	void savePosition(Position position);
+
 }

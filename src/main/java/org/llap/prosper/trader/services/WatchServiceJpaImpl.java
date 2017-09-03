@@ -54,6 +54,11 @@ public class WatchServiceJpaImpl implements WatchService {
 		// TODO Auto-generated method stub
 
 	}
+	
+    @Override
+    public Watch saveWatch(Watch watch) {
+        return watchRepo.save(watch);
+    }
 
 }
 

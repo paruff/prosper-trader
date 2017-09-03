@@ -16,4 +16,6 @@ public interface WatchService {
 	void deleteById(int id);
 
 	Iterable<Watch> listAllWatches();
+
+	Watch saveWatch(Watch watch);
 }

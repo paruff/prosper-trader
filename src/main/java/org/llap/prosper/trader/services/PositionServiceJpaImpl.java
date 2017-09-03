@@ -23,7 +23,7 @@ public class PositionServiceJpaImpl implements PositionService {
 	}
 
 	@Override
-	public Position findById(Long id) {
+	public Position findById(int id) {
 		return this.positionRepo.findOne(id);
 	}
 
@@ -38,8 +38,14 @@ public class PositionServiceJpaImpl implements PositionService {
 	}
 
 	@Override
-	public void deleteById(Long id) {
+	public void deleteById(int id) {
 
+	}
+
+	@Override
+	public void savePosition(Position position) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

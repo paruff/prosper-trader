@@ -8,7 +8,7 @@ package org.llap.prosper.trader.models;
 	public class Position {
 	    @Id
 	    @GeneratedValue(strategy = GenerationType.IDENTITY)
-	    private Long id;
+	    private int id;
 
 	    @Column(nullable = false, length = 300)
 	    private String symbol;
@@ -30,11 +30,11 @@ package org.llap.prosper.trader.models;
 	    
 	     public Position() {}
 
-	     public Long getId() {
+	     public int getId() {
 			return id;
 		}
 
-		public void setId(Long id) {
+		public void setId(int id) {
 			this.id = id;
 		}
 
@@ -70,7 +70,7 @@ package org.llap.prosper.trader.models;
 			this.purchaseShares = purchaseShares;
 		}
 
-		public Position(Long id, String symbol,  double purchasePrice) {
+		public Position(int id, String symbol,  double purchasePrice) {
 	          this.id = id;
 	          this.symbol = symbol;
 //	          this.purchaseDate = purchaseDate;
@@ -88,4 +88,9 @@ package org.llap.prosper.trader.models;
 	            ", purchase shares=" + purchaseShares +
 	            '}';
 	    }
+
+		public String getPositionId() {
+			// TODO Auto-generated method stub
+			return null;
+		}
 	}
