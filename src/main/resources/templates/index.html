@@ -2,32 +2,41 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head th:replace="layout :: site-head">
-    <title>Spring MVC Blog</title>
+    <title>LLAP Trader</title>
 </head>
 
 <body>
 <header th:replace="layout :: site-header" />
 
-<aside>
+<!-- <aside>
     <h2>Recent Posts</h2>
-    <a href="#" th:each="p : ${latest5posts}" th:text="${p.title}"
-       th:href="@{/posts/view/{id}/(id=${p.id})}">Work Begins on HTML5.1</a>
-</aside>
+    <a href="#" th:each="w : ${findAll}" th:text="${w.symbol}"
+       th:href="@{/watch/view/{id}/(id=${p.id})}">Work Begins on HTML5.1</a>
+</aside> -->
 
-<main id="posts">
-    <article th:each="p : ${latest3posts}">
-        <h2 class="title" th:text="${p.title}">Post Title</h2>
-        <div class="date">
+<main id="watchlist">
+    <article th:each="w : ${findAll}">
+        <h2 class="title" th:text="${w.symbol}">symbol</h2>
+        <!-- <div class="date">
             <i>Posted on</i>
             <span th:text="${#dates.format(p.date, 'dd-MMM-yyyy')}">22-May-2016</span>
             <span th:if="${p.author}" th:remove="tag">
                     <i>by</i> <span th:text="${p.author.fullName != null ?
                         p.author.fullName : p.author.username}">Svetlin Nakov</span>
                 </span>
-        </div>
-        <p class="content" th:utext="${p.body}">Post content</p>
+        </div> -->
+        <p class="content" th:utext="${w.getSize()}">Post content</p>
     </article>
 </main>
+<!-- 
+	<h1>Result</h1>
+    <p th:text="'id: ' + ${watch.watchId}" />
+    <p th:text="'symbol: ' + ${watch.symbol}" />
+    <p th:text="'quote: ' + ${watch.getQuote()}" />
+    <p th:text="'entry: ' + ${watch.getEntry()}" />
+    <p th:text="'exit: ' + ${watch.getExit()}" />
+    <p th:text="'size: ' + ${watch.getSize()}" />
+    <a href="/watch">Submit another message</a> -->
 
 <footer th:replace="layout :: site-footer" />
 </body>

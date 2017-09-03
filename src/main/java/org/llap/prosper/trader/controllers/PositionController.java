@@ -10,8 +10,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import org.llap.prosper.trader.services.NotificationService;
+
 import org.llap.prosper.trader.models.Position;
 import org.llap.prosper.trader.services.PositionService;
+import org.llap.prosper.trader.services.NotificationServiceImpl;
 
 
 @Controller
@@ -20,6 +23,9 @@ public class PositionController {
     @Autowired
     private PositionService positionService;
 
+    @Autowired
+    private NotificationService notificationService;
+    
 
   /*  @RequestMapping("/")
     public String home(Model model) {
@@ -33,16 +39,16 @@ public class PositionController {
         return "index";
     }
 */
-    @RequestMapping("/posts/view/{id}")
+    @RequestMapping("/position/view/{id}")
     public String view(@PathVariable("id") Long id,
                        Model model) {
     	Position position = positionService.findById(id);
 
- /*       if (position == null) {
+        if (position == null) {
             notificationService.addErrorMessage(
                     "Cannot find post: " + id);
             return "redirect:/";
-        }*/
+        }
 
         model.addAttribute("position", position);
         return "/position/index";

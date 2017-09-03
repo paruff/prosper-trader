@@ -20,24 +20,6 @@ public class ProsperTraderApplication {
 
 		SpringApplication.run(ProsperTraderApplication.class, args);
 
-		// repo.save(new Watch(1, "T"));
-		// repo.save(new Watch(2, "TLT"));
-		// repo.save(new Watch(3, "FXC"));
-		// repo.save(new Watch(4, "GLD"));
-		// repo.save(new Watch(5, "DIA"));
-
-//		try {
-//
-//			EmailServiceImpl.sendSimpleMessage("phil.ruff@scaledmarkets.com", "spring test email", "test 1");
-//
-//			System.out.println("Email Sent!");
-//
-//		} catch (Exception ex) {
-//
-//			System.out.println("Error in sending email: " + ex);
-//
-//		}
-
 	}
 
 }

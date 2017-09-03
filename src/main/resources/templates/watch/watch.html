@@ -8,7 +8,11 @@
 <body>
 <header th:replace="layout :: site-header" />
 
-<main id="posts">
+<h2>Watch List</h2>
+    <a href="#" th:each="w : ${watchList}" th:text="${w.symbol}"
+       th:href="@{/watch/view/{id}/(id=${p.id})}">Work Begins on HTML5.1</a>
+       
+<main id="watch">
     <article>
         Symbol:  <h2 class="title" th:text="${position.symbol}">symbol Title</h2>
         <div class="date">

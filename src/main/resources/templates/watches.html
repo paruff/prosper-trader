@@ -1,0 +1,36 @@
+
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Watch List</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	WatchList
+	<div class="container">
+		
+		<div th:if="${not #lists.isEmpty(watches)}">
+			<h2>Watch List</h2>
+			<table class="table table-striped">
+				<tr>
+					<th>Id</th>
+
+					<th>Symbol</th>
+					<th>Price</th>
+					<th>View</th>
+					<th>Edit</th>
+				</tr>
+				<tr th:each="watch : ${watches}">
+					<td th:text="${watch.watchId}"><a
+						href="/watch/${watch.watchId}">Id</a></td>
+					<td th:text="${watch.symbol}">symbol</td>
+					<td th:text="${watch.getQuote()}">price</td>
+					<td><a th:href="${ '/watch/' + watch.watchId}">View</a></td>
+					<td><a th:href="${'/watch/edit/' + watch.watchId}">Edit</a></td>
+				</tr>
+			</table>
+
+		</div>
+	</div>
+</body>
+</html>
