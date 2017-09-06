@@ -1,0 +1,9 @@
+---
+applications:
+- name: prosper-trader
+  memory: 1G
+  random-route: true
+  path: target/prosper-trader-0.0.1-SNAPSHOT.jar
+services:
+- config-server
+- mysql
